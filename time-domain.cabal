@@ -5,8 +5,13 @@ license:            MIT
 license-file:       LICENSE
 author:             Manuel Bärenz
 maintainer:         programming@manuelbaerenz.de
-description:        A library for time domains and durations
+synopsis:           A library for time domains and durations
+description:        This library mainly provides a type class, 'TimeDomain',
+                    which can be used to specify times and durations.
+                    There are some instances for standard types from @base@ and @time@.
 extra-source-files: CHANGELOG.md
+category:           FRP
+homepage:           https://github.com/turion/time-domain/
 
 library
   exposed-modules:  Data.TimeDomain
