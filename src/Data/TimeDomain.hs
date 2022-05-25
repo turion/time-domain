@@ -35,7 +35,7 @@ class TimeDifference (Diff time) => TimeDomain time where
 
   Mnemonic: 'diffTime' behaves like the '(-)' operator:
 
-  @'diffTime' earlier later = later `'diffTime'` earlier@ is the duration it takes from @earlier@ to @later.
+  @'diffTime' earlier later = later `'diffTime'` earlier@ is the duration it takes from @earlier@ to @later@.
   -}
   diffTime :: time -> time -> Diff time
 
