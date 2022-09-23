@@ -12,6 +12,13 @@ description:        This library mainly provides a type class, 'TimeDomain',
 extra-source-files: CHANGELOG.md
 category:           FRP
 homepage:           https://github.com/turion/time-domain/
+source-repository head
+  type:     git
+  location: git@github.com:turion/time-domain.git
+source-repository this
+  type:     git
+  location: git@github.com:turion/time-domain.git
+  tag:      v0.1.0.1
 
 library
   exposed-modules:  Data.TimeDomain
