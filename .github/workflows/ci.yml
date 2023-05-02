@@ -7,11 +7,9 @@ jobs:
       matrix:
         ghc: ['8.8.4','8.10.7','9.0.2','9.2.2','9.4.2']
     name: Haskell GHC ${{ matrix.ghc }} cabal
-    env:
-      cabal_project_freeze: cabal.project.${{ matrix.ghc }}.freeze
     steps:
-      - uses: actions/checkout@v2
-      - uses: haskell/actions/setup@v1.2.9
+      - uses: actions/checkout@v3
+      - uses: haskell/actions/setup@v2
         id: setup-haskell-build
         with:
           ghc-version: ${{ matrix.ghc }}
@@ -21,15 +19,15 @@ jobs:
           path: |
             ${{ steps.setup-haskell-build.outputs.cabal-store }}
             dist-newstyle
-          key: ${{ runner.os }}-cabal-${{ matrix.ghc }}-${{ hashFiles(env.cabal_project_freeze) }}
+          key: ${{ runner.os }}-cabal-${{ matrix.ghc }}
           restore-keys: |
             ${{ runner.os }}-cabal-${{ matrix.ghc }}
       - name: Cabal build dependencies
         run: |
-          cabal build all  --enable-tests --only-dependencies --project-file=cabal.project.${{ matrix.ghc }}
+          cabal build all  --enable-tests --only-dependencies
       - name: Cabal build packages
         run: |
-          cabal build all --enable-tests --project-file=cabal.project.${{ matrix.ghc }}
+          cabal build all --enable-tests
       - name: Cabal test
         run: |
-          cabal test all --enable-tests --test-show-details=Always --project-file=cabal.project.${{ matrix.ghc }}
+          cabal test all --enable-tests --test-show-details=Always
