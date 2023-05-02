@@ -1,6 +1,6 @@
 cabal-version:      2.4
 name:               time-domain
-version:            0.1.0.1
+version:            0.1.0.2
 license:            MIT
 license-file:       LICENSE
 author:             Manuel Bärenz
@@ -14,11 +14,11 @@ category:           FRP
 homepage:           https://github.com/turion/time-domain/
 source-repository head
   type:     git
-  location: git@github.com:turion/time-domain.git
+  location: https://github.com/turion/time-domain.git
 source-repository this
   type:     git
-  location: git@github.com:turion/time-domain.git
-  tag:      v0.1.0.1
+  location: https://github.com/turion/time-domain.git
+  tag:      v0.1.0.2
 
 library
   exposed-modules:  Data.TimeDomain
