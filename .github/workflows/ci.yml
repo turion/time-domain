@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ghc: ['8.8.4','8.10.7','9.0.2','9.2.5','9.4.4']
+        ghc: ['8.8.4','8.10.7','9.0.2','9.2.5','9.4.4','9.6.1']
     name: Haskell GHC ${{ matrix.ghc }} cabal
     steps:
       - uses: actions/checkout@v3
