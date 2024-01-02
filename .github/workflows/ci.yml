@@ -27,7 +27,7 @@ jobs:
           cabal build all  --enable-tests --only-dependencies
       - name: Cabal build packages
         run: |
-          cabal build all --enable-tests
+          cabal build all --enable-tests -fdev
       - name: Cabal test
         run: |
-          cabal test all --enable-tests --test-show-details=Always
+          cabal test all --enable-tests --test-show-details=Always -fdev
