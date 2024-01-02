@@ -8,7 +8,7 @@ jobs:
         ghc: ['8.8.4','8.10.7','9.0.2','9.2.8','9.4.8','9.6.3','9.8.1']
     name: Haskell GHC ${{ matrix.ghc }} cabal
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: haskell/actions/setup@v2
         id: setup-haskell-build
         with:
