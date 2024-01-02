@@ -1,5 +1,5 @@
 # Revision history for time-domain
 
-## 0.1.0.0 -- YYYY-mm-dd
+## 0.1.0.3
 
-* First version. Released on an unsuspecting world.
+* Support GHC 9.8
