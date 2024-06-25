@@ -68,3 +68,12 @@ jobs:
       - name: Cabal test
         run: |
           cabal test all --enable-tests --test-show-details=Always -fdev
+
+  success:
+    name: Successfully build and test on all systems
+    needs:
+      - build
+    runs-on:
+      - ubuntu-latest
+    steps:
+      - run: echo "Success"
